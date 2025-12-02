@@ -22,7 +22,7 @@
 <?import javafx.scene.text.Font?>
 
 <!-- Główny kontener layoutu -->
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:controller="org.example.samochodgui.SamochodController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
 
     <!-- Pasek Menu na samej górze -->
     <top>
@@ -67,20 +67,20 @@
                                             </rowConstraints>
                                             <children>
                                                 <Label text="Model" />
-                                                <TextField GridPane.columnIndex="1" />
+                                                <TextField fx:id="carmodelTextField" GridPane.columnIndex="1" />
                                                 <Label text="Nr rejestracyjny" GridPane.rowIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="carregistrationTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                 <Label text="Waga" GridPane.rowIndex="2" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="carweightTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                 <Label text="Prędkość" GridPane.rowIndex="3" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField fx:id="carspeedTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                             </children>
                                         </GridPane>
                                         <HBox alignment="CENTER" spacing="5.0">
                                             <children>
-                                                <Button mnemonicParsing="false" text="Włącz" />
-                                                <Button mnemonicParsing="false" text="Wyłącz" />
-                                                <Button mnemonicParsing="false" text="Button" />
+                                                <Button fx:id="startButton" mnemonicParsing="false" text="Włącz" />
+                                                <Button fx:id="stopButton" mnemonicParsing="false" text="Wyłącz" />
+
                                             </children>
                                         </HBox>
                                     </children>
@@ -106,19 +106,19 @@
                                             </rowConstraints>
                                             <children>
                                                 <Label text="Nazwa" />
-                                                <TextField GridPane.columnIndex="1" />
+                                                <TextField fx:id="gearboxnameTextField" GridPane.columnIndex="1" />
                                                 <Label text="Cena" GridPane.rowIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="gearboxpriceTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                 <Label text="Waga" GridPane.rowIndex="2" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="gearboxweightTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                 <Label text="Bieg" GridPane.rowIndex="3" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField fx:id="gearboxgearTextField"GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                             </children>
                                         </GridPane>
                                         <HBox alignment="CENTER" spacing="5.0">
                                             <children>
-                                                <Button mnemonicParsing="false" text="Zwiększ bieg" />
-                                                <Button mnemonicParsing="false" text="Zmniejsz bieg" />
+                                                <Button fx:id="shiftupButton" mnemonicParsing="false" text="Zwiększ bieg" />
+                                                <Button fx:id="shiftdownButton" mnemonicParsing="false" text="Zmniejsz bieg" />
                                             </children>
                                         </HBox>
                                     </children>
@@ -144,19 +144,19 @@
                                             </rowConstraints>
                                             <children>
                                                 <Label text="Nazwa" />
-                                                <TextField GridPane.columnIndex="1" />
+                                                <TextField fx:id="enginenameTextField" GridPane.columnIndex="1" />
                                                 <Label text="Cena" GridPane.rowIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="enginepriceTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                 <Label text="Waga" GridPane.rowIndex="2" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="engineweightTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                 <Label text="Obroty" GridPane.rowIndex="3" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField fx:id="enginerpmTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                             </children>
                                         </GridPane>
                                         <HBox alignment="CENTER" spacing="5.0">
                                             <children>
-                                                <Button mnemonicParsing="false" text="Dodaj gazu" />
-                                                <Button mnemonicParsing="false" text="Ujmij gazu" />
+                                                <Button fx:id="accelerateButton" mnemonicParsing="false" text="Dodaj gazu" />
+                                                <Button fx:id="deaccelerateButton" mnemonicParsing="false" text="Ujmij gazu" />
                                             </children>
                                         </HBox>
                                     </children>
@@ -182,19 +182,19 @@
                                             </rowConstraints>
                                             <children>
                                                 <Label text="Nazwa" />
-                                                <TextField GridPane.columnIndex="1" />
+                                                <TextField fx:id="clutchnameTextField" GridPane.columnIndex="1" />
                                                 <Label text="Cena" GridPane.rowIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="clutchpriceTextField"GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                 <Label text="Waga" GridPane.rowIndex="2" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="clutchweightTextField"GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                 <Label text="Stan" GridPane.rowIndex="3" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField fx:id="clutchstateTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                             </children>
                                         </GridPane>
                                         <HBox alignment="CENTER" spacing="5.0">
                                             <children>
-                                                <Button mnemonicParsing="false" text="Naciśnij" />
-                                                <Button mnemonicParsing="false" text="Zwolnij" />
+                                                <Button fx:id="clutchengButton" mnemonicParsing="false" text="Naciśnij" />
+                                                <Button fx:id="clutchdngButton" mnemonicParsing="false" text="Zwolnij" />
                                             </children>
                                         </HBox>
                                     </children>
@@ -219,9 +219,9 @@
                     </padding>
                     <children>
                         <Label text="Samochód:" />
-                        <ComboBox prefWidth="150.0" />
-                        <Button mnemonicParsing="false" text="Dodaj nowy" />
-                        <Button mnemonicParsing="false" text="Usuń" />
+                        <ComboBox fx:id="carComboBox" prefWidth="150.0" />
+                        <Button fx:id="addcarButton" mnemonicParsing="false" text="Dodaj nowy" />
+                        <Button fx:id="rmcarButton" mnemonicParsing="false" text="Usuń" />
                     </children>
                 </HBox>
             </top>

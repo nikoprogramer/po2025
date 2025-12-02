@@ -7,10 +7,10 @@ public class SkrzyniaBiegow extends Komponent {
         super(nazwa, waga, cena);
         this.iloscBiegow = iloscBiegow;
     }
-    public void zwiekszBieg(){
+    public static void zwiekszBieg(){
         if (aktualnyBieg < iloscBiegow) {aktualnyBieg++;}
     }
-    public void zmniejszBieg(){
+    public static void zmniejszBieg(){
         if (aktualnyBieg > 0) {aktualnyBieg--;}
     }
     public void luz(){
