@@ -6,7 +6,13 @@
       <list>
         <option value="$PROJECT_DIR$/symulator/Samochod/pom.xml" />
         <option value="$PROJECT_DIR$/SamochodGUI/pom.xml" />
+        <option value="$PROJECT_DIR$/symulator/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/symulator/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="liberica-23" project-jdk-type="JavaSDK">

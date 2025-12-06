@@ -1,4 +1,4 @@
-package symulator;
+package pl.nikodem.samochod.symulator;
 
 public class Pozycja {
     private double x;

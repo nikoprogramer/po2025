@@ -1,4 +1,4 @@
-package symulator;
+package pl.nikodem.samochod.symulator;
 
 public class Sprzeglo extends Komponent {
     boolean stanSprzegla;
@@ -11,5 +11,10 @@ public class Sprzeglo extends Komponent {
     }
     public void zwolnij(){
         stanSprzegla = false;
+    }
+
+    public boolean getStanSprzegla() { return stanSprzegla; }
+    public void setStanSprzegla(boolean stanSprzegla) {
+        this.stanSprzegla = stanSprzegla;
     }
 }

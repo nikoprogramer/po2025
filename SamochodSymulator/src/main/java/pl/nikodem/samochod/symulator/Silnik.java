@@ -1,11 +1,11 @@
-package symulator;
+package pl.nikodem.samochod.symulator;
 
 public class Silnik extends Komponent {
     private int maxObroty;
     private int obroty;
-    public Silnik(String nazwa, double waga, double cena) {
+    public Silnik(String nazwa, double waga, double cena, int maxObroty) {
         super(nazwa, waga, cena);
-        this.maxObroty = 0;
+        this.maxObroty = maxObroty;
         this.obroty = 0;
     }
     public void uruchom(){
@@ -16,15 +16,18 @@ public class Silnik extends Komponent {
 
     }
     public void zwiekszObroty() {
-        this.obroty += 200;
+        if (this.maxObroty > this.obroty) {this.obroty += 200; }
     }
     public void zmniejszObroty() {
-        this.obroty -= 200;
+        if (this.obroty > 800 ) {this.obroty -= 200;}
     }
     public int getMaxObroty() {
         return maxObroty;
     }
     public int getObroty() {
         return obroty;
+    }
+    public void setmaxObroty(int maxObroty) {
+        this.maxObroty = maxObroty;
     }
 }

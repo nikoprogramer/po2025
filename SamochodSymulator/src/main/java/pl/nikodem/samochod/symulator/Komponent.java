@@ -1,4 +1,4 @@
-package symulator;
+package pl.nikodem.samochod.symulator;
 
 public class Komponent {
     private String nazwa;
@@ -17,6 +17,16 @@ public class Komponent {
     }
     public double getCena() {
         return cena;
+    }
+
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
+    }
+    public void setWaga(double waga) {
+        this.waga = waga;
+    }
+    public void setCena(double cena) {
+        this.cena = cena;
     }
 
 }
