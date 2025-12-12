@@ -10,10 +10,24 @@ public class SkrzyniaBiegow extends Komponent {
         this.sprzeglo = new Sprzeglo("Basic", 200, 1000,true);
     }
     public void zwiekszBieg(){
-        if (aktualnyBieg < iloscBiegow) {aktualnyBieg++;}
+        if (sprzeglo.getStanSprzegla()) {
+            if (aktualnyBieg < iloscBiegow) {
+                aktualnyBieg++;
+                System.out.println("Wrzucono bieg " + aktualnyBieg +".");
+            } else {
+                System.out.println("TRRRRRRZRTZRTR");
+            }
+        }
     }
     public void zmniejszBieg(){
-        if (aktualnyBieg > 0) {aktualnyBieg--;}
+        if  (sprzeglo.getStanSprzegla()) {
+            if (aktualnyBieg > 0) {
+                aktualnyBieg--;
+                System.out.println("Redukcja do biegu " + aktualnyBieg +".");
+            }
+        } else {
+            System.out.println("TRRRRRRZRTZRTR");
+        }
     }
     public void luz(){
         aktualnyBieg = 0;
@@ -25,6 +39,9 @@ public class SkrzyniaBiegow extends Komponent {
 
     public void setIloscBiegow(int iloscBiegow) {
         this.iloscBiegow = iloscBiegow;
+    }
+    public void setSprzeglo(Sprzeglo sprzeglo) {
+        this.sprzeglo = sprzeglo;
     }
 
 }

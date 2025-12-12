@@ -19,14 +19,4 @@ public class Komponent {
         return cena;
     }
 
-    public void setNazwa(String nazwa) {
-        this.nazwa = nazwa;
-    }
-    public void setWaga(double waga) {
-        this.waga = waga;
-    }
-    public void setCena(double cena) {
-        this.cena = cena;
-    }
-
 }
