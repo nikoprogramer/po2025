@@ -91,3 +91,6 @@ Arkadiusz Baran, Maciek Miłek
 Roch Głogowski, Antoni Janek
 
 36) Inteligentna spiżarka: spis jedzenia i produktów w spiżarce, książka kucharska, sprawdzanie dostępnych przepisów na podstawie stanu spiżarki 
+
+37) Gra Karciana: graficzna arena gry, obsługa PvP lub PvE, sprawdzanie swojej kolekcji, losowy dobór z talii, system nagród.
+Nikodem Bednarski, Wojciech Pietras
