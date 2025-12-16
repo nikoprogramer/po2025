@@ -43,12 +43,14 @@ public class HelloController {
             clutchpriceTextField.setText("");
             clutchnameTextField.setText("");
             clutchstateTextField.setText("");
+
             return;
         }
         //wypelnianie menu samochód
         carmodelTextField.setText(mojSamochod.getModel());
         carregistrationTextField.setText(mojSamochod.getNrRejestracyjny());
         carweightTextField.setText(String.valueOf(mojSamochod.getWaga()));
+        carspeedTextField.setText(String.format("%.1f km/h", mojSamochod.getAktualnaPredkosc()));
 
         //wypelnianie menu silnik
         enginenameTextField.setText(mojSamochod.getSilnik().getNazwa());
@@ -122,6 +124,12 @@ public class HelloController {
                     if (Math.abs(dx) > 0.1 || Math.abs(dy) > 0.1) {
                         double angle = Math.toDegrees(Math.atan2(dy, dx));
                         ikonka.setRotate(angle); // Kręcimy tylko ImageView w środku
+                    }
+
+                    if (auto == mojSamochod) {
+                        double predkosc = auto.getAktualnaPredkosc();
+                        // Ustawiamy tekst w polu carspeedTextField (zrób formatowanie do 1 miejsca po przecinku)
+                        carspeedTextField.setText(String.format("%.1f km/h", predkosc));
                     }
                 });
             }
@@ -222,7 +230,7 @@ public class HelloController {
             mojSamochod = wybrane;
             odswiezWidok();
         }
-        odswiezWidok();
+        //odswiezWidok();
     }
     public Button addcarButton;
     public void onAddCarButton(){

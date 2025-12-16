@@ -7,11 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="samochod" />
-        <module name="Samochod" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="SamochodGUI" target="21" />
+      <module name="Samochod" target="23" />
+      <module name="SamochodGUI" target="23" />
       <module name="symulator" target="23" />
     </bytecodeTargetLevel>
   </component>

@@ -60,6 +60,17 @@ public class Samochod extends Thread {
         }
     }
 
+    public double getAktualnaPredkosc() {
+        // Warunek: Auto ma prędkość tylko gdy ma cel (jedzie), silnik działa i bieg jest wrzucony
+        if (maCel && silnik.getObroty() > 0 && skrzynia.getAktualnyBieg() > 0) {
+
+            // Prosty wzór na km/h: (Obroty * Bieg) / 100
+            // Np. 2000 obr * 3 bieg = 6000 / 100 = 60 km/h
+            return (silnik.getObroty() * skrzynia.getAktualnyBieg()) / 100.0;
+        }
+        return 0.0; // W przeciwnym razie stoi
+    }
+
     @Override //nadpisuje threada
     public void run() {
         while (isRunning) {
@@ -82,6 +93,7 @@ public class Samochod extends Thread {
 
            if (dystans < 5.0) {
                maCel = false;
+               notifyListeners();
                return;
            }
            //predkosc przemieszczania opisana wzorem: (obroty*bieg)/stała
